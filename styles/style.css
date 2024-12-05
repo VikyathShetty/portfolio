@@ -1,0 +1,173 @@
+/* General reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+
+/* Utility classes */
+.hidden {
+  display: none; /* Hides the element */
+}
+
+  /* Background image container */
+  .container {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/openart-image_nuriQKXW_1733327546519_raw.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    
+    /* Slide-in animation */
+    transform: translateX(100%); /* Start off-screen */
+    animation: slideIn 1s forwards; /* Trigger the animation */
+  }
+  
+  /* Slide-in animation keyframes */
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%); /* Start off-screen */
+    }
+    100% {
+      transform: translateX(0); /* Slide in */
+    }
+  }
+  
+  /* Name in the top-left corner */
+.name {
+    position: absolute;
+    top: 20px; /* Adjust the distance from the top */
+    left: 20px; /* Adjust the distance from the left */
+    font-size: 2rem; /* You can change the font size as needed */
+    font-weight: bold;
+    color: white; /* Ensure the text is visible */
+    z-index: 10; /* Make sure it's above other content */
+  }
+
+
+/* Navigation Container */
+.nav-container {
+    position: absolute;
+    top: 20px; /* Align with the social icons */
+    right: 250px; /* Place to the left of the social icons */
+    display: flex;
+    gap: 10px; /* Space between links */
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(169, 54, 54, 0.2); /* Add a subtle background on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+  }
+  
+
+/* Social Icons Container */
+.social-container {
+    position: absolute;
+    top: 20px; /* Position from the top */
+    right: 20px; /* Position from the right */
+    display: flex;
+    gap: 15px; /* Spacing between icons */
+    z-index: 10; /* Ensure it stays above other elements */
+  }
+  
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+.social-icon svg {
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for icons */
+.social-icon:hover {
+    transform: scale(1.2); /* Slight zoom effect */
+    background-color: white; /* Change background color */
+  }
+  
+.social-icon.github:hover svg {
+    color: #333; /* GitHub brand color */
+  }
+  
+.social-icon.linkedin:hover svg {
+    color: #0a66c2; /* LinkedIn brand color */
+  }
+  
+
+/* About Section */
+.about-section {
+  background-image: url('../images/blackccold-IrnppN3Bzhk-unsplash.jpg'); /* Add background image */
+  background-size: cover; /* Ensure the background image covers the entire section */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent repeating the background image */
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 0; /* Remove margins between sections */
+}
+
+/* Ensure no gap between the container and about-section */
+.container + .about-section {
+  margin-top: 0; /* No space between container and about-section */
+}
+
+/* heading */
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: 	 #ffffff;
+}
+/* content heading */
+.about-content {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: 	 #ffffff;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+}
+/* content */
+.about-content strong {
+  color:	 #ffffff;
+  font-weight: bold;
+}
+
+  /* Add some styles for text */
+  .container h1 {
+    font-size: 3rem;
+    margin: 0.5rem;
+  }
+  
+  .container p {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
