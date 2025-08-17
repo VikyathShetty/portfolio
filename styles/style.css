@@ -284,10 +284,20 @@ section {
 }
 
 .about-containers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  
+}
+
+/* .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
-}
+} */
 
 .title {
   color: white; /* Keep the title visible on the black background */
@@ -316,7 +326,9 @@ section {
 
 .details-container {
   padding: 1.5rem;
-  flex: 1;
+  /* flex: 1; */
+  flex: 1 1 300px; /* ensures equal box width */
+  max-width: 350px;
   background: white;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
@@ -378,6 +390,7 @@ article .icon {
   cursor: default;
 }
 
+
 /* PROJECTS SECTION */
 
 #projects {
@@ -404,6 +417,44 @@ article .icon {
   color: black;
   border-color: rgb(163, 163, 163);
 }
+/* Highlighted last project box */
+.highlight-box {
+  background: linear-gradient(135deg, #e0f7ff, #d0ebff); /* brighter gradient */
+  border: 2px solid #0077ff;
+  box-shadow: 0 8px 25px rgba(0, 119, 255, 0.4); /* stronger glow */
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.highlight-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 119, 255, 0.6);
+}
+
+.highlight-text {
+  margin: 10px 0 20px 0;
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: 600;
+}
+
+/* GitHub button with logo */
+.github-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* spacing between logo and text */
+  font-weight: bold;
+}
+
+.github-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
 
 /* CONTACT */
 
